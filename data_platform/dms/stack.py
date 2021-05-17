@@ -83,10 +83,7 @@ class OrdersDMS(dms.CfnReplicationTask):
                 core.CfnDynamicReferenceService.SECRETS_MANAGER,
                 key=f"{self.common_stack.orders_rds.secret.secret_arn}:SecretString:dbname",
             ).to_string(),
-            port=float(core.CfnDynamicReference(
-                core.CfnDynamicReferenceService.SECRETS_MANAGER,
-                key=f"{self.common_stack.orders_rds.secret.secret_arn}:SecretString:port",
-            ).to_string()),
+            port=5432,
             server_name=self.common_stack.orders_rds.db_instance_endpoint_address,
             extra_connection_attributes="captureDDLs=Y",
         )
