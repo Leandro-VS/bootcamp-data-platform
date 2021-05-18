@@ -1,3 +1,15 @@
 {
-    "python.pythonPath": "/home/leandro/anaconda3/envs/howbootcamp/bin/python"
+    "python.pythonPath": "/home/leandro/anaconda3/envs/howbootcamp/bin/python",
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "rds-production-orders-db.cuejbhjfdhmg.us-east-1.rds.amazonaws.com",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "aws-postgresql",
+            "database": "orders",
+            "username": "postgres",
+            "password": "HtXLh3=xEOfLBGk0tT.o^.GDl.Y7Ti"
+        }
+    ]
 }
