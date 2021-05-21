@@ -59,7 +59,7 @@ class AirflowStack(core.Stack):
         self.bucket = s3.Bucket(
             self,
             id=f"s3-{self.deploy_env.value}-leandro-airflow",
-            bucket_name=f"s3-{self.deploy_env.value}-leandro2-airflow",
+            bucket_name=f"s3-{self.deploy_env.value}-leandrohow-airflow",
             removal_policy=core.RemovalPolicy.DESTROY,
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
         )
@@ -195,7 +195,7 @@ class AirflowStack(core.Stack):
 
         s3deploy.BucketDeployment(
             self,
-            id=f"{self.deploy_env.value}-leandro2-airflow-content",
+            id=f"{self.deploy_env.value}-leandrohow-airflow-content",
             destination_bucket=self.bucket,
             sources=[s3deploy.Source.asset("data_platform/airflow/resources.zip")],
         )
