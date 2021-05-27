@@ -29,10 +29,10 @@ glue_catalog_stack = GlueCatalogStack(app,
                                     )
 athena_stack = AthenaStack(app)
 databricks_stack = DatabricksStack(app)
-# airflow_stack = AirflowStack(
-#     app,
-#     data_lake_raw_bucket=data_lake_stack.data_lake_raw_bucket,
-#     common_stack=common_stack
-#     )
+airflow_stack = AirflowStack(
+    app,
+    data_lake_raw_bucket=data_lake_stack.data_lake_raw_bucket,
+    common_stack=common_stack
+    )
 
 app.synth()
