@@ -28,7 +28,7 @@ glue_catalog_stack = GlueCatalogStack(app,
                                     staged_data_lake_bucket=data_lake_stack.data_lake_raw_staged
                                     )
 athena_stack = AthenaStack(app)
-# databricks_stack = DatabricksStack(app)
+databricks_stack = DatabricksStack(app)
 # airflow_stack = AirflowStack(
 #     app,
 #     data_lake_raw_bucket=data_lake_stack.data_lake_raw_bucket,
