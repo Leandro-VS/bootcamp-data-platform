@@ -62,6 +62,7 @@ class AirflowStack(core.Stack):
             bucket_name=f"s3-{self.deploy_env.value}-belisquito-airflow",
             removal_policy=core.RemovalPolicy.DESTROY,
             block_public_access=s3.BlockPublicAccess.BLOCK_ALL,
+            versioned=True
         )
 
         self.execution_role = iam.Role(
