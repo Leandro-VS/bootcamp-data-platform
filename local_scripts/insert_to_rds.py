@@ -1,6 +1,7 @@
 import psycopg2
 from datetime import datetime
-import os
+
+# import os
 from random import choice
 import time
 import uuid
@@ -49,5 +50,7 @@ while True:
     cur.execute(
         f"insert into orders_v2 values ('{created_at}', '{order_id}', '{product_name}', {value})"
     )
-    print(f"insert into orders values ('{created_at}', '{order_id}', '{product_name}', {value})")
+    print(
+        f"insert into orders values ('{created_at}', '{order_id}', '{product_name}', {value})"
+    )
     time.sleep(0.2)
