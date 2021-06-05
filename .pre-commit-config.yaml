@@ -1,0 +1,13 @@
+repos:
+  # Usa o black (pyproject.toml) para fazer um lint no codigo python
+  - repo: https://github.com/ambv/black
+    rev: stable
+    hooks:
+      - id: black
+        language_version: python3.8
+  
+  # Usa o flake8 (.flake8) para fazer checagem estatica no codigo python
+  - repo: https://gitlab.com/pycqa/flake8
+    rev: 3.7.9
+    hooks:
+      - id: flake8
