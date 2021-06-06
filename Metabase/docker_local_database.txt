@@ -1,0 +1,5 @@
+Iniciar o Metase Localmente:
+$ docker run -d -p 3000:3000 --name metabase metabase/metabase
+
+Acessa-lo no navegador
+localhost:3000
